@@ -12,7 +12,7 @@ public class Process extends Thread {
     }
 
     @Override
-    public synchronized void start() {
+    public void run() {
         try {
             necessaryResources = createNecessaryResources();
             banker.getResources(id, necessaryResources);
